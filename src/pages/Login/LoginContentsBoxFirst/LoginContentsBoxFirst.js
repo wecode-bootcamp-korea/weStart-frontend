@@ -35,7 +35,7 @@ class LoginContentsBoxFirst extends Component {
       alert("WESTAGRAM GOGO");
       this.props.history.push('/main');
     } else {
-      alert("아이디는 @를 포함하고, 비밀번호는 5자 이상이어야 합니다.");
+      alert("올바른 이메일 형식이 아니거나, 비밀번호는 5자 이상이어야 합니다.");
     } 
   }
   // 버튼 클릭시 main 이동 함수 실행 //
@@ -52,7 +52,7 @@ class LoginContentsBoxFirst extends Component {
   // 로고 누를시 바로 main 이동 함수 //
   // 리다이렉트 하고 싶었으나 실패 //
   goToReflesh() {
-    this.props.history.push('/main');
+    this.props.history.push('/');
   }
 
   render() {

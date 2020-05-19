@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./SignupPageApp.scss";
 import SingupInputContents from "./SingupInputContents"
-import LoginContentsBoxSecond from "../Login/LoginContentsBoxSecond/LoginContentsBoxSecond"
+import SignupContentsBoxSecond from "./SignupContentsBoxSecond"
 import LoginContentsBoxThird from "../Login/LoginContentsBoxThird/LoginContentsBoxThird"
 import LoginContentsBoxFour from "../Login/LoginContentsBoxFour/LoginContentsBoxFour"
 import LoginFooter from "../Login/LoginFooter/LoginFooter";
@@ -15,7 +15,7 @@ class SignupPageApp extends Component {
       <div className="SignupPageApp">
         <div className="SignupContents">
           <SingupInputContents />
-          <LoginContentsBoxSecond />
+          <SignupContentsBoxSecond />
           <LoginContentsBoxThird />
           <LoginContentsBoxFour />
           
