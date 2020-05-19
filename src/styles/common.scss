@@ -1,0 +1,20 @@
+/* 메인하면 유저이름 텍스트 */
+.userName-span {  
+  font-size:0.8em;
+  cursor: pointer;
+  font-weight:bold;  
+  display:block;
+  margin:0 0 0.3em 0;
+}
+/* 메인화면 오른쪽메뉴의 스토리, 회원님을 위한 추천 텍스트 */
+.span-right-secondTitle {
+  font-size:0.9em;
+  color:gray;
+  font-weight: bold;
+}
+/* 메인화면 오른쪽메뉴의 모두보기 텍스트 */
+.span-right-description {
+  cursor: pointer;
+  font-size:0.8em;
+  font-weight: bold;
+}  

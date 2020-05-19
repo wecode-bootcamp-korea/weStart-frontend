@@ -1,0 +1,153 @@
+article { 
+  margin-bottom:4em;
+  width: 100%;
+  border: solid 1px  rgba(181, 181, 181, 0.5);  
+  border-radius:0.2em;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  .article-title {
+    display: flex;
+    height:4em;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    padding:0.7em;
+    img {
+      flex:none;
+      width: 2em;
+      height: 2em;
+      border-radius: 10em;
+      cursor: pointer;
+    }
+    .article-title-center {
+      flex:none;
+      margin:0 0.5em;
+      .location {
+        font-size:0.7em;
+        cursor: pointer; 
+        display:block;
+      }
+    }
+    .article-title-more {
+      margin-left: auto;
+      width:1.5em;
+      img {
+        width:100%;
+        height:100%;  
+        cursor: pointer; 
+      }
+    }  
+  }
+  .article-center-image {
+    width:100%;
+    img { 
+      width:100%;
+    }
+  }  
+  .article-content {
+    max-height: 15em;
+    min-height: 10em;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    .article-content-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:0.3em 0.8em;
+      .article-content-title-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 7.5em;
+        img {
+          width: 1.7em;
+          height: 1.6em;  
+          cursor: pointer;
+        }        
+      }
+      .article-content-title-center {
+        display: flex;   
+        width: 7.5em;
+        justify-content: center;
+        align-items: center;
+      }      
+      .article-content-title-right {
+        display:flex;
+        width:7.5em;
+        img {
+          display:flex;
+          width: 1.8em;
+          height: 1.6em;
+          margin-left:auto;
+          cursor: pointer;
+        }
+      }
+    }
+    .article-like-user {
+      display:flex;
+      align-items: center;
+      padding:0.3em 0.8em;
+      img {
+        width:1.5em;
+        margin-right:0.5em;
+        cursor: pointer;
+      }
+      /* 이름정보 텍스트에 사용할 span */
+      .span-like-user { 
+        font-size:0.8em;
+        margin:0 0.1em;
+        cursor: pointer;  
+        font-weight: bold;
+      }
+      .span-like-user-common {
+        font-size:0.8em;  
+        margin:0 0.1em;
+      }
+    }    
+    .comment-view-div {
+      max-height: 6em;
+      padding: 0.5em 0.8em;
+      overflow-y: auto;
+      /* 댓글창에 글 달리면 보이는 글씨체 */
+      p {
+        font-size:0.8em;
+        margin:0.2em;
+      }
+    }
+    .comment-write-div {
+      padding:0.1em 0.8em;
+      border-top: solid 1px  rgba(181, 181, 181, 0.5); 
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      width:100%;  
+      min-height:3.7em;
+      margin-top:auto;
+      input {
+        border: solid 0.1px  rgba(255, 255, 255, 0.1);
+        width: 90%;  
+      }
+      input:focus {outline:none;}         
+      .clickbutton {
+        color:rgba(var(--d69,0,149,246),1);
+        cursor: pointer;  
+        background-color: white;
+        border: solid 0.1px  rgba(255, 255, 255, 0.1);
+        font-size:0.9em;
+        font-weight: bold;
+        transition: ease-in-out 0.3s;  
+      }
+      button:focus {outline:none;}    
+      .submitButton {
+        color:rgba(var(--d69,0,149,246),.3);
+        background-color: white;
+        border: solid 0.1px  rgba(255, 255, 255, 0.1);
+        font-size:0.9em;
+        font-weight: bold;
+        transition: ease-in-out 0.3s;
+      }
+    }
+  }
+}

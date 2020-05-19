@@ -1,0 +1,105 @@
+.SingupInputContents {
+  width: 22em;
+  height: 23.7em;
+  border: rgba(181, 181, 181, 0.5) 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;        
+  .logo-div {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;       
+    img {
+      width:50%;
+      cursor: pointer;
+    }
+  }
+  .idpass-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 18.7em;
+      height: 2.5em;
+      border-radius: 0.3em;
+      border: rgba(181, 181, 181, 0.5) solid 0.08em;
+      margin: 0.1em;
+      padding: 0 0.5em;
+    }
+    input:focus {outline:none;}          
+    input::placeholder {
+      color: rgba(181, 181, 181, 1);
+      font-size: 0.9em;
+      text-align: left;
+    }           
+    .beforebutton {
+      width: 18.7em;
+      height: 2.3em;
+      border-radius: 0.3em;
+      border:rgba(var(--d69,0,149,246),.3);
+      background-color:rgba(var(--d69,0,149,246),.3);    
+      color:white;
+      margin: 1em 0 0 0;
+      outline:0;
+      transition: ease-in-out 0.3s;       
+    }
+    button:focus {outline:none;}  
+    .afterbutton {     
+      cursor: pointer;     
+      width: 18.7em;
+      height: 2.3em;
+      border-radius: 0.3em;
+      border:rgba(var(--d69,0,149,246),.3);
+      background-color:rgba(var(--d69,0,149,246),1);
+      color:white;
+      margin: 1em 0 0 0;
+      outline:0;
+      transition: ease-in-out 0.3s;
+    }
+  }
+  .hr-div {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    .hr-div-inner {
+      width: 5.9em;
+      hr {
+        border:0.5px solid rgba(181, 181, 181, 0.3);
+      }
+    }
+    span {
+      font-size: 0.9em;
+      color: rgba(181, 181, 181, 1);
+    }
+  }
+  .info-div {
+    height: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;  
+    a { 
+      color:#385185;
+      font-weight: bold;
+      font-size: 1.1em;
+      cursor: pointer;  
+      outline:none;
+      border:rgba(var(--d69,0,149,246),.3);    
+      background-color:white;
+      display: flex;
+      align-items: center;          
+      span {
+        margin:0 0.3em;
+        img {
+          height: 1.1em;
+        }
+      }            
+    }
+    span { 
+      font-size: 0.8em;
+      cursor: pointer;
+    }
+  }    
+}

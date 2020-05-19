@@ -1,0 +1,14 @@
+.SignupPageApp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
+  flex-direction: column;
+  height: 100vh;
+  padding: 1em;
+  .SignupContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+  }      
+}  

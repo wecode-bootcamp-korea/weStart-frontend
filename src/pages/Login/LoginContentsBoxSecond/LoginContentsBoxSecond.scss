@@ -1,0 +1,19 @@
+.LoginContentsBoxSecond {
+  width: 22em;
+  height: 4em;
+  border: rgba(181, 181, 181, 0.5) 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0.5em 0;
+  span {
+    font-size: 0.8em;
+    margin:0 0.4em;
+  }  
+  p {
+    color:rgba(var(--d69,0,149,246),1);
+    font-size: 0.9em;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

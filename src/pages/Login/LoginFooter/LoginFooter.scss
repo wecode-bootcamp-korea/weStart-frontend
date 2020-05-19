@@ -1,0 +1,24 @@
+.LoginFooter {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5em 3em;
+  width:100%;
+  .footer-left {
+    a {
+      margin:0 0.5em;  
+      font-size: 0.7em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }  
+  .footer-right {
+    span {
+      font-size: 0.7em;
+      font-weight: bold;
+      color:rgba(181, 181, 181, 1)
+    }
+  }
+}
+
