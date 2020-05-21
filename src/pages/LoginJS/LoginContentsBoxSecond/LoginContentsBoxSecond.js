@@ -9,7 +9,7 @@ class LoginContentsBoxSecond extends Component {
 
   // 회원가입 페이지 이동 함수 //
   clickGoAccount() {
-    this.props.history.push('/signup');
+    this.props.history.push('/signupJS');
   }
 
   render(){

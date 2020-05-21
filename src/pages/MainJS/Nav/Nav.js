@@ -8,7 +8,7 @@ class Nav extends Component {
   }
 
   goToLogin() {
-    this.props.history.push('/login');  
+    this.props.history.push('/loginJS');  
   }
 
   render() {

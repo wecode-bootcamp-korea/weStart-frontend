@@ -12,7 +12,6 @@ class Feeds extends Component {
     return (
       <div className="feeds">
         <Article />
-        <Article />     
       </div> 
     )
   }

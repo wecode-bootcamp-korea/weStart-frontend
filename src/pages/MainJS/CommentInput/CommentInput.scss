@@ -1,0 +1,33 @@
+.comment-write-div {
+  padding:0.1em 0.8em;
+  border-top: solid 1px  rgba(181, 181, 181, 0.5); 
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;  
+  min-height:3.7em;
+  margin-top:auto;
+  input {
+    border: solid 0.1px  rgba(255, 255, 255, 0.1);
+    width: 90%;  
+  }
+  input:focus {outline:none;}         
+  .clickbutton {
+    color:rgba(var(--d69,0,149,246),1);
+    cursor: pointer;  
+    background-color: white;
+    border: solid 0.1px  rgba(255, 255, 255, 0.1);
+    font-size:0.9em;
+    font-weight: bold;
+    transition: ease-in-out 0.3s;  
+  }
+  button:focus {outline:none;}    
+  .submitButton {
+    color:rgba(var(--d69,0,149,246),.3);
+    background-color: white;
+    border: solid 0.1px  rgba(255, 255, 255, 0.1);
+    font-size:0.9em;
+    font-weight: bold;
+    transition: ease-in-out 0.3s;
+  }
+}

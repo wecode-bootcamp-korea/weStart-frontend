@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "./SignupPageApp.scss";
 import SingupInputContents from "./SingupInputContents"
 import SignupContentsBoxSecond from "./SignupContentsBoxSecond"
-import LoginContentsBoxThird from "../Login/LoginContentsBoxThird/LoginContentsBoxThird"
-import LoginContentsBoxFour from "../Login/LoginContentsBoxFour/LoginContentsBoxFour"
-import LoginFooter from "../Login/LoginFooter/LoginFooter";
+import LoginContentsBoxThird from "../LoginJS/LoginContentsBoxThird/LoginContentsBoxThird"
+import LoginContentsBoxFour from "../LoginJS/LoginContentsBoxFour/LoginContentsBoxFour"
+import LoginFooter from "../LoginJS/LoginFooter/LoginFooter";
 class SignupPageApp extends Component {
   constructor() {
     super();
@@ -17,8 +17,7 @@ class SignupPageApp extends Component {
           <SingupInputContents />
           <SignupContentsBoxSecond />
           <LoginContentsBoxThird />
-          <LoginContentsBoxFour />
-          
+          <LoginContentsBoxFour />          
         </div>  
         <LoginFooter />       
       </div>

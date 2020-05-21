@@ -10,7 +10,6 @@ class LoginContents extends Component {
   constructor() {
     super();    
   }
-
  
   render() {
     console.log(this.state)

@@ -7,16 +7,16 @@ class SignContentsBoxSecond extends Component {
     super();    
   }
 
-  // 회원가입 페이지 이동 함수 //
-  clickGoAccount() {
-    this.props.history.push('/login');
+  // login페이지로 바로 이동 함수 //
+  clickGoLogin() {
+    this.props.history.push('/loginJS');
   }
 
   render(){
     return(
       <div className="SignContentsBoxSecond">
         <span>계정이 있으신가요?</span>
-        <p onClick={this.clickGoAccount.bind(this)}>로그인</p>
+        <p onClick={this.clickGoLogin.bind(this)}>로그인</p>
       </div>
     )
   }
