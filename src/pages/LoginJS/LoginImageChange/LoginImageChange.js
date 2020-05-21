@@ -8,6 +8,7 @@ class LoginImageChange extends Component {
       imgIndex:1
     }
   }
+  
   // 이미지 주소값을 바꾸는 함수 //
   // 이미지가 고정으로 6개 이기에 약간 하드코딩 //
   changeNum = () => {

@@ -9,7 +9,6 @@ class LoginContentsBoxFirst extends Component {
     this.state = {
       email:"", // email input창 벨류값 state, pk //
       password:"", // password input창 벨류값 state //
-      name:"",
       emailPasswordCheck:false //email, password유효성검사 state //
     }
   }
@@ -33,8 +32,20 @@ class LoginContentsBoxFirst extends Component {
     } else {
       this.setState({emailPasswordCheck:false}, () => console.log("유효성:", this.state.emailPasswordCheck))  
     }
-  } 
+  }  
   
+  // 버튼 클릭으로 main 이동 함수 실행 //
+  buttonClickAndGo() {    
+    this.validation();
+  }
+  
+  // 엔터키로 main 이동 함수 실행 //
+  enterkeyAndGo(event) {    
+    if (event.keyCode === 13) {
+      this.validation()
+    }
+  }
+
   // 유효성 검사 후 fetch로 넘길 함수 //
   validation() {
     if (this.state.emailPasswordCheck === true) { 
@@ -72,18 +83,6 @@ class LoginContentsBoxFirst extends Component {
         alert("먼저 회원가입을 해주세요")
       }     
     })   
-  }
-
-  // 버튼 클릭으로 main 이동 함수 실행 //
-  buttonClickAndGo() {    
-    this.validation();
-  }
-  
-  // 엔터키로 main 이동 함수 실행 //
-  enterkeyAndGo(event) {    
-    if (event.keyCode === 13) {
-      this.validation()
-    }
   }
 
   // 로고 누를시 바로 "/"로 이동 함수 //

@@ -5,23 +5,10 @@ class CommentInput extends Component {
   constructor() {
     super();
     
-    this.state = {
-      // data: {
-      
-          
-      //     id: 1, user_id: 3, user_comment: "second", created_at: "2020-05-20T00:00:00Z", updated_at: "2020-05-20T00:00:00Z"
-        
-      // }
-      name:"",
+    this.state = {    
       text:"", // 댓글창에 text onChange용 state //
       TextValidateCheck:false // 댓글 input값 없는 것 유효성검사용 state //
     }    
-  }
-  
-  // 로그인된 유저의 이름으로 댓글 작성되도록 state //
-  // fetch 후 자동으로 //
-  componentDidMount() {
-    this.setState({name:this.props.name})
   }
 
   // input값 저장 핸들러 //
@@ -36,6 +23,18 @@ class CommentInput extends Component {
     } else {
       this.setState({TextValidateCheck:false}, () => console.log("유효성:", this.state.TextValidateCheck)) 
     }
+  }  
+
+  // 버튼 클릭으로 comment작성 실행할 함수 //
+  buttonCilck() {
+    this.validation()
+  }
+  
+  // 엔터키로 comment작성 실행할 함수 //
+  enterAndComment(event) {
+    if(event.keyCode === 13) {
+      this.validation()
+    }
   }
 
   // 유효성 검사 후 fetch로 넘길 함수 //
@@ -49,33 +48,17 @@ class CommentInput extends Component {
 
   // comment작성 실행될 fetch 함수 // 
   commentAddOn() {
-    // fetch('http://10.58.4.56:8000/comment', {    
-    //   method: "POST",
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     "user":this.props.name,
-    //     "user_comment":this.state.text
-    //   })
-    // })
-    // .then(res => console.log(res)); 
-
-    // this.props.commentInputProps(this.state.data);
-    // this.props.commentInputProps({id: 1, user_id:this.state.name, user_comment:this.state.text, created_at: "2020-05-20T00:00:00Z", updated_at: "2020-05-20T00:00:00Z"});
-    // this.setState({text:"", TextValidateCheck:false}); // state 초기화 코드  
-  }  
-
-  // 버튼 클릭으로 comment작성 실행할 함수 //
-  buttonCilck() {
-    this.validation()
-  }
-  
-   // 엔터키로 comment작성 실행할 함수 //
-   enterAndComment(event) {
-    if(event.keyCode === 13) {
-      this.validation()
-    }
+    fetch('http://10.58.4.56:8000/comment', {    
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "user":this.props.name,
+        "user_comment":this.state.text
+      })
+    })  
+    this.setState({text:"", TextValidateCheck:false}); // state 초기화 코드, 그래야 input, button이벤트가 바로 초기화됨  
   }
 
   render() {

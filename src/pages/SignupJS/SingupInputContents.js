@@ -37,6 +37,18 @@ class SingupInputContents extends Component {
     }
   }
 
+  // 버튼 클릭으로 login 이동 함수 실행 //
+  buttonClickAndGo() {
+    this.validation()
+  }
+
+  // 엔터키로 login 이동 함수 실행 //
+  enterkeyAndGo(event) {    
+    if (event.keyCode === 13) {
+      this.validation()
+    }
+  }
+
   // 유효성 검사 후 fetch로 넘길 함수 //
   validation() {
     if (this.state.emailPasswordCheck === true) { 
@@ -55,14 +67,14 @@ class SingupInputContents extends Component {
       },
       body: JSON.stringify({
         "email": this.state.email,
-        "password": this.state.password,
-        "username": this.state.name       
+        "username": this.state.name,
+        "password": this.state.password               
       })
     })    
     .then(res => {
       if (res.status === 200) {
         alert("westagram 회원이 되신 것을 축하드립니다!")
-        this.props.history.push('/loginJS'); 
+        this.props.history.push('/JS'); 
       }
       if (res.status === 401) {
         alert("이미 존재하는 회원입니다.ㅠㅠ")
@@ -70,19 +82,7 @@ class SingupInputContents extends Component {
       if (res.status === 400) {
         alert("알 수 없는 오류가 발생했습니다.")
       }     
-    })    
-  }
-
-  // 버튼 클릭으로 login 이동 함수 실행 //
-  buttonClickAndGo() {
-    this.validation()
-  }
-
-  // 엔터키로 login 이동 함수 실행 //
-  enterkeyAndGo(event) {    
-    if (event.keyCode === 13) {
-      this.validation()
-    }
+    })   
   }
 
   // 로고 누를시 바로 "/"로 이동 함수 //

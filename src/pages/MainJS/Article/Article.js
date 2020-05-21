@@ -8,21 +8,18 @@ class Article extends Component {
     super();
 
     this.state = {
-      name:"name",      
+      name:"parksunl",
       commentList: {
-        "data":[
-          {id: 1, user_id: 3, user_comment: "first", created_at: "2020-05-20T00:00:00Z", updated_at: "2020-05-20T00:00:00Z"},
-          {id: 1, user_id: 3, user_comment: "second", created_at: "2020-05-20T00:00:00Z", updated_at: "2020-05-20T00:00:00Z"}
-        ]
+        "data":[]
       }
     }
   }  
   
+  // 기존 댓글 내용 가져와서 보여줄 get fetch //
   componentDidMount() {
     fetch("http://10.58.4.56:8000/comment")
     .then((response) => response.json()) 
-    // .then((response) => console.log(response.data[0].user_id))
-    .then((res) => this.setState({commentList:res, name:res.data[0].user_id}, () => console.log(this.state)))    
+    .then((res) => this.setState({commentList:res}, () => console.log(this.state)))       
   }  
 
   // commentInput 컴포넌트에서 온 댓글값을 하나의 commentList state 변경하기 위한 함수 //
@@ -67,7 +64,7 @@ class Article extends Component {
             <span className="span-like-user-common">이 좋아합니다</span>
           </div>
           <CommentList commentListProps={this.state.commentList.data} />         
-          <CommentInput commentInputProps={this.commentConcat} />     
+          <CommentInput commentInputProps={this.commentConcat} name={this.state.name} />     
         </div>
       </article>
     )
