@@ -1,0 +1,15 @@
+.commentText {
+  width:100%;
+  display:flex;
+  b {
+    font-size:0.8em;
+    margin:0.2em 0.6em 0.2em 0.2em;
+    font-weight: bold;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    font-size:0.8em;
+    margin:0.2em;
+  }
+}
